@@ -22,7 +22,7 @@ func main() {
 	}
 
 	http.Handle("/api/feed", feed2json.Handler(
-		feed2json.StaticURLInjector("https://news.ycombinator.com/rss"),
+		feed2json.StaticURLInjector("https://swapi.dev/api/films/"),
 		nil, nil, nil, cacheControlMiddleware))
 	log.Fatal(listener(portStr, nil))
 }
